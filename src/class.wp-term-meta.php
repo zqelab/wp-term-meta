@@ -1,7 +1,7 @@
 <?php
 namespace Zqe;
 
-class Term_Meta {
+class WP_Term_Meta {
 
     private $taxonomy;
     private $post_type;
