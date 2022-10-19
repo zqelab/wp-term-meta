@@ -1,7 +1,7 @@
 {
     "name": "zqelab/wp-term-meta",
     "type": "library",
-    "description": "WordPress term meta Class to make term meta field",
+    "description": "WordPress term-meta Class to make option page",
     "keywords": ["wp","wordpress", "term-meta"],
     "homepage": "https://github.com/zqelab/wp-term-meta",
     "license": "GPL-2.0-or-later",
