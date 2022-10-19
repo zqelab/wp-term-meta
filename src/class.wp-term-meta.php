@@ -40,7 +40,9 @@ class Wp_Term_Meta {
 
         wp_enqueue_media();
         wp_enqueue_style( 'zqe-term-meta', plugin_dir_url( __FILE__ ) . 'css/zqe-term-meta.css', array( 'wp-color-picker' ), '1.0.0', 'all' );
-        wp_enqueue_script( 'zqe-term-meta', plugin_dir_url( __FILE__ ) . 'js/zqe-term-meta.js', array( 'jquery', 'wp-color-picker' ), '1.0.0', true );
+        wp_enqueue_style( 'zqe-from-field-dependency', plugin_dir_url( __FILE__ ) . 'css/zqe-from-field-dependency.css', array(), '1.0.0', 'all' );
+        wp_enqueue_script( 'zqe-from-field-dependency', plugin_dir_url( __FILE__ ) . 'js/zqe-from-field-dependency.js', array( 'jquery' ), '1.0.0', true );
+        wp_enqueue_script( 'zqe-term-meta', plugin_dir_url( __FILE__ ) . 'js/zqe-term-meta.js', array( 'jquery', 'wp-color-picker', 'zqe-from-field-dependency' ), '1.0.0', true );
     }
 
     /**

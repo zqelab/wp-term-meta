@@ -45,5 +45,6 @@
 	});
 
 	$('.zqe-term-meta-color-picker').wpColorPicker()
+	$('[data-dependency]').Dependency()
 
 })(jQuery)
