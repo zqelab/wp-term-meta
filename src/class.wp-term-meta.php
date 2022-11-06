@@ -121,7 +121,7 @@ class Wp_Term_Meta {
         wp_nonce_field( basename( __FILE__ ), 'term_meta_text_nonce' );
 
         foreach ( $fields as $field ) {
-
+            $field['term']          = $term;
             $field['id']                = esc_html($field['id']);
 
             if ( ! $term ) {
@@ -490,7 +490,7 @@ class Wp_Term_Meta {
      *
      * @since    1.0.0
      */
-    public function field_callback($field) {
+    private static function field_callback($field) {
         return call_user_func_array($field['callback'], [(array) $field]);
     }
     /**
