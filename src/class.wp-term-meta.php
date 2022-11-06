@@ -161,6 +161,9 @@ class Wp_Term_Meta {
                 case 'checkbox':
                     echo self::checkbox($field);
                 break;
+                case 'callback':
+                    echo self::field_callback($field);
+                break;
                 default:
                 break;
             }
@@ -482,7 +485,14 @@ class Wp_Term_Meta {
         <?php
         return ob_get_clean();
     }
-
+    
+    /**
+     *
+     * @since    1.0.0
+     */
+    public function field_callback($field) {
+        return call_user_func_array($field['callback'], [(array) $field]);
+    }
     /**
      *
      * @since    1.0.0
